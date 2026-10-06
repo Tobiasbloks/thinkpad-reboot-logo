@@ -1,0 +1,55 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1115"/>
+      <stop offset="100%" stop-color="#1a1d24"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2d55"/>
+      <stop offset="100%" stop-color="#d91335"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#ff2d55" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="28" fill="url(#bgGlow)"/>
+
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#2b3039" stroke-width="18"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#7d8693" stroke-width="4" opacity="0.35"/>
+
+  <g transform="translate(256 256)" filter="url(#softGlow)">
+    <path
+      d="M 0 -110 A 110 110 0 1 1 -94 -64"
+      fill="none"
+      stroke="url(#accent)"
+      stroke-width="18"
+      stroke-linecap="round"
+      stroke-dasharray="360 500"
+      style="animation: spin 2.2s linear infinite; transform-origin: 0 0;"
+    />
+  </g>
+
+  <g filter="url(#softGlow)">
+    <path d="M 286 123 L 340 100 L 296 72 Z" fill="url(#accent)" transform="rotate(18 256 256)"/>
+  </g>
+
+  <circle cx="256" cy="256" r="52" fill="#10141a" stroke="#ff2d55" stroke-width="6"/>
+  <circle cx="256" cy="256" r="20" fill="#ff2d55"/>
+
+  <g fill="#e5e7eb">
+    <text x="256" y="418" text-anchor="middle"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-weight="700"
+          font-size="36" letter-spacing="2">THINKPAD</text>
+  </g>
+
+  <style>
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</svg>
